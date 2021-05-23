@@ -1,0 +1,22 @@
+@import "./utils/variables";
+@import "./utils/placeholders";
+
+@import "./base/common";
+@import "./base/container";
+
+@import "./components/logo";
+@import "./components/socials-icons";
+@import "./components/button";
+@import "./components/modal";
+@import "./components/form";
+
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/section";
+@import "./layouts/features";
+@import "./layouts/footer";
+@import "./layouts/team";
+@import "./layouts/works";
+@import "./layouts/clients";
+@import "./layouts/filters";
+@import "./layouts/projects";

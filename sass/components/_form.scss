@@ -1,0 +1,131 @@
+.form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  position: relative;
+}
+
+.form__field label {
+  margin-bottom: 4px;
+}
+
+.form__icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+
+  display: inline-flex;
+  fill: var(--form-icon-close);
+  transition: fill var(--animation);
+}
+
+.form__input:focus ~ .form__icon {
+  fill: var(--accent-color);
+}
+
+.form__input:focus-within {
+  border: 1px solid var(--accent-color);
+}
+
+.form__input {
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+
+  border-radius: 4px;
+  padding-left: 42px;
+  outline: none;
+  transition: border var(--animation);
+}
+
+textarea {
+  resize: none;
+  margin-bottom: 17px;
+}
+
+.form__comment {
+  padding: 12px 16px;
+  min-height: 120px;
+}
+
+.form__field input::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.checkbox__label {
+  display: block;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.checkbox--border:focus-within {
+  border: 1px solid var(--accent-color);
+}
+
+.checkbox__policy {
+  font-size: 14px;
+  line-height: 1.71;
+  text-decoration-line: underline;
+
+  color: var(--accent-color);
+}
+
+.checkbox__icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+}
+
+.checkbox--position {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.checkbox--position:checked + .checkbox__icon {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  border-radius: 2px;
+  border: none;
+  background-image: url("../images/icons/aiconcheck.svg");
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.form__button {
+  display: inline-flex;
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  padding: 10px 55px;
+  font-size: inherit;
+  cursor: pointer;
+
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}

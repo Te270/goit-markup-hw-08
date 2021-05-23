@@ -1,0 +1,136 @@
+.header {
+  border-bottom: 1px solid var(--border-main-cl);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__site-nav .list {
+  display: flex;
+  align-items: center;
+}
+
+.header__site-nav .link:hover,
+.header__site-nav .link:focus,
+.header__contacts .link:hover,
+.header__contacts .link:focus {
+  @extend %hoverfocus-cl;
+}
+
+.header__current {
+  text-decoration: none;
+  color: currentColor;
+
+  position: relative;
+}
+
+.header__current::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--main-current-cl);
+  border-radius: 2px;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  opacity: 1;
+
+  transition: opacity var(--animation);
+}
+
+.header__logo {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: auto;
+}
+
+.header__nav-top {
+  display: block;
+}
+
+.header__site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 93px;
+}
+
+.header__site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header__site-nav .link {
+  color: var(--section-title-color);
+
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  text-decoration: none;
+}
+
+.header__contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.header__contacts .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--link-text-color);
+
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  text-decoration: none;
+}
+
+.header__contacts .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.header__contacts-link {
+  color: var(--link-text-color);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+.header--mail {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  cursor: pointer;
+  background-size: contain;
+  fill: currentColor;
+}
+
+.header--phone {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  background-size: contain;
+  fill: currentColor;
+}

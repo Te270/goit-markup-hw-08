@@ -1,0 +1,135 @@
+footer {
+  background-color: var(--dark-bcg-cl);
+
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.footer--padding {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__content {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.footer__socials {
+  display: block;
+  align-items: center;
+  justify-content: left;
+}
+
+.footer__socials-icons {
+  margin: 0;
+}
+
+.footer--radius {
+  background-color: var(--footer-radius-bcg);
+  border-radius: 50%;
+}
+
+.footer__title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  color: var(--white-accent-color);
+}
+
+.footer__socials-icons--color {
+  fill: var(--white-accent-color);
+}
+
+.footer__list--top {
+  margin-top: 20px;
+}
+
+.footer__address--margin:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer__location--decor {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--white-accent-color);
+
+  font-style: normal;
+}
+
+.footer__contacts--color {
+  font-style: normal;
+  color: var(--footer-rgba-cl);
+
+  text-decoration: none;
+
+  transition: color var(--animation);
+
+  &:hover,
+  &:focus {
+    @extend %hoverfocus-cl;
+  }
+}
+
+.footer__address--color {
+  color: var(--white-accent-color);
+}
+
+.footer__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.footer__mail {
+  padding: 15px 16px;
+  margin-right: 12px;
+  width: 358px;
+  height: 50px;
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.25px;
+  letter-spacing: 0.03em;
+  color: var(--footer-rgba-cl);
+
+  &:hover,
+  &:focus-within {
+    border: 1px solid #2196f3;
+  }
+}
+
+.footer__mail input::placeholder {
+  color: var(--footer-rgba-cl);
+}
+
+.footer__icon {
+  position: absolute;
+  top: 13px;
+  right: 28px;
+  fill: var(--button-text-color);
+}
+
+.footer__btn {
+  width: 200px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  color: var(--button-text-color);
+}

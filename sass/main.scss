@@ -1,13 +1,14 @@
 @import "./utils/variables";
 @import "./utils/placeholders";
+@import "./utils/breakpoints";
 
 @import "./base/common";
 @import "./base/container";
 
 @import "./components/logo";
 @import "./components/socials-icons";
-@import "./components/button";
 @import "./components/modal";
+@import "./components/button";
 @import "./components/form";
 
 @import "./layouts/header";

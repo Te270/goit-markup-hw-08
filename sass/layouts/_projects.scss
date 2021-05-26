@@ -45,6 +45,19 @@
   margin: 0;
 }
 
+.projects__content {
+  flex-wrap: wrap;
+  flex-basis: 100%;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+  }
+}
+
 .projects__text {
   padding-top: 20px;
   padding-right: 24px;

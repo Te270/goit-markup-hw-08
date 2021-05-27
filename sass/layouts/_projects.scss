@@ -8,6 +8,8 @@
 .projects {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
 .projects__card {
@@ -48,14 +50,6 @@
 .projects__content {
   flex-wrap: wrap;
   flex-basis: 100%;
-
-  @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 2 * 30px) / 2);
-  }
-
-  @media screen and (min-width: 1200px) {
-    flex-basis: calc((100% - 3 * 30px) / 3);
-  }
 }
 
 .projects__text {
@@ -67,15 +61,25 @@
 }
 
 .projects__items {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  margin-left: 30px;
   border: 1px solid rgba(238, 238, 238, 1);
   border-top: transparent;
-  margin-right: 30px;
-  margin-bottom: 30px;
-  width: 370px;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+  }
 }
 
 .projects__link--decoration {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
 
   transition: box-shadow var(--animation);
@@ -90,14 +94,14 @@
   }
 }
 
-.projects__group {
+/* .projects__group {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
   line-height: 1.87;
   text-decoration: none;
   color: var(--primary-text-color);
-}
+} */
 
 .projects__items:nth-child(3n) {
   margin-right: 0;

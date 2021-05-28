@@ -1,0 +1,68 @@
+.mobile__button {
+  display: inline-flex;
+  margin-left: auto;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  z-index: 100;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  fill: var(--section-title-color);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &::hover,
+  &::focus {
+    fill: var(--accent-color);
+    transition: fill var(--animation);
+  }
+}
+
+.mobile__button .mobile__button-close {
+  display: none;
+}
+
+.mobile__button.is-open .mobile__button-close {
+  display: block;
+}
+
+.mobile__button.is-open .mobile__button-menu {
+  display: none;
+}
+
+.mobile-menu {
+  padding: 48px 40px;
+  background-color: var(--white-accent-color);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.mobile__navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}

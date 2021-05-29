@@ -1,5 +1,6 @@
 .mobile__button {
   display: inline-flex;
+  flex-direction: row-reverse;
   margin-left: auto;
   padding: 0;
   width: 40px;
@@ -13,12 +14,12 @@
   @media screen and (min-width: 768px) {
     display: none;
   }
+}
 
-  &::hover,
-  &::focus {
-    fill: var(--accent-color);
-    transition: fill var(--animation);
-  }
+.mobile__button::hover,
+.mobile__button::focus {
+  fill: var(--accent-color);
+  transition: fill var(--animation);
 }
 
 .mobile__button .mobile__button-close {
@@ -34,6 +35,7 @@
 }
 
 .mobile-menu {
+  overflow-y: scroll;
   padding: 48px 40px;
   background-color: var(--white-accent-color);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
@@ -41,14 +43,16 @@
 
   @media screen and (max-width: 767px) {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
     width: 100%;
     height: 100vh;
     z-index: 99;
+  }
 
-    &.is-open {
+  &.is-open {
+    @media screen and (max-width: 767px) {
       display: flex;
       flex-direction: column;
     }
@@ -65,4 +69,28 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+}
+
+.mobile__socials {
+  display: flex;
+  padding-left: 0;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile__socials-item:not(:last-child) {
+  margin-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile__socials-link {
+  margin-right: 10px;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--accent-color);
 }

@@ -25,44 +25,121 @@
           <a href="./index.html" class="logo header__logo"
             >Web<span class="logo__accent">Studio</span>
           </a>
-          <ul class="header__site-nav list">
-            <li class="item">
-              <a href="./index.html" class="link header__nav-top">Студия</a>
-            </li>
-            <li class="item">
-              <a
-                href="./portfolio.html"
-                class="link header__nav-top header__current"
-                >Портфолио</a
-              >
-            </li>
-            <li class="item">
-              <a href="" class="link header__nav-top">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="header__contacts list">
-          <li class="item header__contacts-link">
-            <a href="mailto:info@devstudio.com" class="link header__nav-top">
-              <svg class="header--mail">
-                <use
-                  href="./images/icons/symbol-defs.svg#icon-envelopehover"
-                ></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="item header__contacts-link">
-            <a href="tel:+380961111111" class="link header__nav-top">
-              <svg class="header--phone">
-                <use
-                  href="./images/icons/symbol-defs.svg#icon-smartphone"
-                ></use>
-              </svg>
-              +38 096 111 11 11</a
+
+          <button
+            type="button"
+            class="mobile__button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            data-menu-button
+          >
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
             >
-          </li>
-        </ul>
+              <use
+                class="mobile__button-close"
+                href="./images/icons/symbol-defs.svg#icon-acloseblack18dp"
+              ></use>
+              <use
+                class="mobile__button-menu"
+                href="./images/icons/symbol-defs.svg#icon-amenu40px"
+              ></use>
+            </svg>
+          </button>
+
+          <div class="mobile-menu" id="mobile-menu" data-menu>
+            <div class="mobile__navigation">
+              <ul class="header__site-nav list">
+                <li class="item">
+                  <a
+                    href="./index.html"
+                    class="link header__current header__nav-top"
+                    >Студия</a
+                  >
+                </li>
+                <li class="item">
+                  <a href="./portfolio.html" class="link header__nav-top"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="item">
+                  <a href="" class="link header__nav-top">Контакты</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mobile__contacts">
+              <ul class="header__contacts list header__contacts--wrap">
+                <li class="item header__contacts-link">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="link header__nav-top header__nav--mail"
+                  >
+                    <svg class="header--mail">
+                      <use
+                        href="./images/icons/symbol-defs.svg#icon-envelopehover"
+                      ></use>
+                    </svg>
+                    info@devstudio.com
+                  </a>
+                </li>
+                <li class="item header__contacts-link">
+                  <a
+                    href="tel:+380961111111"
+                    class="link header__nav-top header__nav--phone"
+                  >
+                    <svg class="header--phone">
+                      <use
+                        href="./images/icons/symbol-defs.svg#icon-smartphone"
+                      ></use>
+                    </svg>
+                    +38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <ul class="mobile__socials">
+              <li class="list mobile__socials-item">
+                <a
+                  href=""
+                  class="mobile__socials-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Instagram</a
+                >
+              </li>
+              <li class="list mobile__socials-item">
+                <a
+                  href=""
+                  class="mobile__socials-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Twitter</a
+                >
+              </li>
+              <li class="list mobile__socials-item">
+                <a
+                  href=""
+                  class="mobile__socials-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Facebook</a
+                >
+              </li>
+              <li class="list mobile__socials-item">
+                <a
+                  href=""
+                  class="mobile__socials-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
 
@@ -121,11 +198,63 @@
               <div class="projects__content">
                 <a href="" class="projects__link--decoration">
                   <div class="projects__card">
-                    <img
-                      src="./images/tekhno.jpg"
-                      alt="Сайт клиентов"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/adapt/desktop/portfolio/portfolio1.webp    1x,
+                          ./images/adapt/desktop/portfolio/portfolio1@2x.webp 2x
+                        "
+                        media="(min-width:1200px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/tablet/portfolio/portfolio1.webp    1x,
+                          ./images/adapt/tablet/portfolio/portfolio1@2x.webp 2x
+                        "
+                        media="(min-width:768px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/mobile/portfolio/portfolio1.webp    1x,
+                          ./images/adapt/mobile/portfolio/portfolio1@2x.webp 2x
+                        "
+                        media="(min-width:767.98px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/desktop/portfolio/portfolio1.jpg    1x,
+                          ./images/adapt/desktop/portfolio/portfolio1@2x.jpg 2x
+                        "
+                        media="(min-width:1200px)"
+                        type="image/jpeg"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/tablet/portfolio/portfolio1.jpg    1x,
+                          ./images/adapt/tablet/portfolio/portfolio1@2x.jpg 2x
+                        "
+                        media="(min-width:768px)"
+                        type="image/jpeg"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/mobile/portfolio/portfolio1.jpg    1x,
+                          ./images/adapt/mobile/portfolio/portfolio1@2x.jpg 2x
+                        "
+                        media="(min-width:767.98px)"
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="./images/adapt/mobile/portfolio/portfolio1.jpg"
+                        alt="Сайт клиентов"
+                        width="450"
+                        height="294"
+                      />
+                    </picture>
+
                     <div class="projects__description">
                       <p class="projects__paragraph">
                         Технокряк это современная площадка распространения
@@ -146,11 +275,63 @@
               <div class="projects__content">
                 <a href="" class="projects__link--decoration">
                   <div class="projects__card">
-                    <img
-                      src="./images/orlean.jpg"
-                      alt="Баскетболисты в прыжке"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/adapt/desktop/portfolio/portfolio2.webp    1x,
+                          ./images/adapt/desktop/portfolio/portfolio2@2x.webp 2x
+                        "
+                        media="(min-width:1200px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/tablet/portfolio/portfolio2.webp    1x,
+                          ./images/adapt/tablet/portfolio/portfolio2@2x.webp 2x
+                        "
+                        media="(min-width:768px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/mobile/portfolio/portfolio2.webp    1x,
+                          ./images/adapt/mobile/portfolio/portfolio2@2x.webp 2x
+                        "
+                        media="(min-width:767.98px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/desktop/portfolio/portfolio2.jpg    1x,
+                          ./images/adapt/desktop/portfolio/portfolio2@2x.jpg 2x
+                        "
+                        media="(min-width:1200px)"
+                        type="image/jpeg"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/tablet/portfolio/portfolio2.jpg    1x,
+                          ./images/adapt/tablet/portfolio/portfolio2@2x.jpg 2x
+                        "
+                        media="(min-width:768px)"
+                        type="image/jpeg"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/mobile/portfolio/portfolio2.jpg    1x,
+                          ./images/adapt/mobile/portfolio/portfolio2@2x.jpg 2x
+                        "
+                        media="(min-width:767.98px)"
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="./images/orlean.jpg"
+                        alt="Баскетболисты в прыжке"
+                        width="450"
+                        height="294"
+                      />
+                    </picture>
+
                     <div class="projects__description">
                       <p class="projects__paragraph">
                         Технокряк это современная площадка распространения
@@ -173,11 +354,63 @@
               <div class="projects__content">
                 <a href="" class="projects__link--decoration">
                   <div class="projects__card">
-                    <img
-                      src="./images/seafood.jpg"
-                      alt="Логотип ресторана"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/adapt/desktop/portfolio/portfolio3.webp    1x,
+                          ./images/adapt/desktop/portfolio/portfolio3@2x.webp 2x
+                        "
+                        media="(min-width:1200px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/tablet/portfolio/portfolio3.webp    1x,
+                          ./images/adapt/tablet/portfolio/portfolio3@2x.webp 2x
+                        "
+                        media="(min-width:768px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/mobile/portfolio/portfolio3.webp    1x,
+                          ./images/adapt/mobile/portfolio/portfolio3@2x.webp 2x
+                        "
+                        media="(min-width:767.98px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/desktop/portfolio/portfolio3.jpg    1x,
+                          ./images/adapt/desktop/portfolio/portfolio3@2x.jpg 2x
+                        "
+                        media="(min-width:1200px)"
+                        type="image/jpeg"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/tablet/portfolio/portfolio3.jpg    1x,
+                          ./images/adapt/tablet/portfolio/portfolio3@2x.jpg 2x
+                        "
+                        media="(min-width:768px)"
+                        type="image/jpeg"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/mobile/portfolio/portfolio3.jpg    1x,
+                          ./images/adapt/mobile/portfolio/portfolio3@2x.jpg 2x
+                        "
+                        media="(min-width:767.98px)"
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="./images/seafood.jpg"
+                        alt="Логотип ресторана"
+                        width="450"
+                        height="294"
+                      />
+                    </picture>
+
                     <div class="projects__description">
                       <p class="projects__paragraph">
                         Технокряк это современная площадка распространения
@@ -200,7 +433,63 @@
               <div class="projects__content">
                 <a href="" class="projects__link--decoration">
                   <div class="projects__card">
-                    <img src="./images/prime.jpg" alt="Наушники" width="370" />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/adapt/desktop/portfolio/portfolio4.webp    1x,
+                          ./images/adapt/desktop/portfolio/portfolio4@2x.webp 2x
+                        "
+                        media="(min-width:1200px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/tablet/portfolio/portfolio4.webp    1x,
+                          ./images/adapt/tablet/portfolio/portfolio4@2x.webp 2x
+                        "
+                        media="(min-width:768px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/mobile/portfolio/portfolio4.webp    1x,
+                          ./images/adapt/mobile/portfolio/portfolio4@2x.webp 2x
+                        "
+                        media="(min-width:767.98px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/desktop/portfolio/portfolio4.jpg    1x,
+                          ./images/adapt/desktop/portfolio/portfolio4@2x.jpg 2x
+                        "
+                        media="(min-width:1200px)"
+                        type="image/jpeg"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/tablet/portfolio/portfolio4.jpg    1x,
+                          ./images/adapt/tablet/portfolio/portfolio4@2x.jpg 2x
+                        "
+                        media="(min-width:768px)"
+                        type="image/jpeg"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/mobile/portfolio/portfolio4.jpg    1x,
+                          ./images/adapt/mobile/portfolio/portfolio4@2x.jpg 2x
+                        "
+                        media="(min-width:767.98px)"
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="./images/prime.jpg"
+                        alt="Наушники"
+                        width="450"
+                        height="294"
+                      />
+                    </picture>
+
                     <div class="projects__description">
                       <p class="projects__paragraph">
                         Технокряк это современная площадка распространения
@@ -223,11 +512,63 @@
               <div class="projects__content">
                 <a href="" class="projects__link--decoration">
                   <div class="projects__card">
-                    <img
-                      src="./images/boxes.jpg"
-                      alt="Коробочки на белом фоне"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/adapt/desktop/portfolio/portfolio5.webp    1x,
+                          ./images/adapt/desktop/portfolio/portfolio5@2x.webp 2x
+                        "
+                        media="(min-width:1200px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/tablet/portfolio/portfolio5.webp    1x,
+                          ./images/adapt/tablet/portfolio/portfolio5@2x.webp 2x
+                        "
+                        media="(min-width:768px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/mobile/portfolio/portfolio5.webp    1x,
+                          ./images/adapt/mobile/portfolio/portfolio5@2x.webp 2x
+                        "
+                        media="(min-width:767.98px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/desktop/portfolio/portfolio5.jpg    1x,
+                          ./images/adapt/desktop/portfolio/portfolio5@2x.jpg 2x
+                        "
+                        media="(min-width:1200px)"
+                        type="image/jpeg"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/tablet/portfolio/portfolio5.jpg    1x,
+                          ./images/adapt/tablet/portfolio/portfolio5@2x.jpg 2x
+                        "
+                        media="(min-width:768px)"
+                        type="image/jpeg"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/mobile/portfolio/portfolio5.jpg    1x,
+                          ./images/adapt/mobile/portfolio/portfolio5@2x.jpg 2x
+                        "
+                        media="(min-width:767.98px)"
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="./images/boxes.jpg"
+                        alt="Коробочки на белом фоне"
+                        width="450"
+                        height="294"
+                      />
+                    </picture>
+
                     <div class="projects__description">
                       <p class="projects__paragraph">
                         Технокряк это современная площадка распространения
@@ -250,11 +591,63 @@
               <div class="projects__content">
                 <a href="" class="projects__link--decoration">
                   <div class="projects__card">
-                    <img
-                      src="./images/inspiration.jpg"
-                      alt="Страница сайта на темном фоне"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/adapt/desktop/portfolio/portfolio6.webp    1x,
+                          ./images/adapt/desktop/portfolio/portfolio6@2x.webp 2x
+                        "
+                        media="(min-width:1200px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/tablet/portfolio/portfolio6.webp    1x,
+                          ./images/adapt/tablet/portfolio/portfolio6@2x.webp 2x
+                        "
+                        media="(min-width:768px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/mobile/portfolio/portfolio6.webp    1x,
+                          ./images/adapt/mobile/portfolio/portfolio6@2x.webp 2x
+                        "
+                        media="(min-width:767.98px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/desktop/portfolio/portfolio6.jpg    1x,
+                          ./images/adapt/desktop/portfolio/portfolio6@2x.jpg 2x
+                        "
+                        media="(min-width:1200px)"
+                        type="image/jpeg"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/tablet/portfolio/portfolio6.jpg    1x,
+                          ./images/adapt/tablet/portfolio/portfolio6@2x.jpg 2x
+                        "
+                        media="(min-width:768px)"
+                        type="image/jpeg"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/mobile/portfolio/portfolio6.jpg    1x,
+                          ./images/adapt/mobile/portfolio/portfolio6@2x.jpg 2x
+                        "
+                        media="(min-width:767.98px)"
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="./images/inspiration.jpg"
+                        alt="Страница сайта на темном фоне"
+                        width="450"
+                        height="294"
+                      />
+                    </picture>
+
                     <div class="projects__description">
                       <p class="projects__paragraph">
                         Технокряк это современная площадка распространения
@@ -277,11 +670,63 @@
               <div class="projects__content">
                 <a href="" class="projects__link--decoration">
                   <div class="projects__card">
-                    <img
-                      src="./images/limited.jpg"
-                      alt="Развертка книги"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/adapt/desktop/portfolio/portfolio7.webp    1x,
+                          ./images/adapt/desktop/portfolio/portfolio7@2x.webp 2x
+                        "
+                        media="(min-width:1200px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/tablet/portfolio/portfolio7.webp    1x,
+                          ./images/adapt/tablet/portfolio/portfolio7@2x.webp 2x
+                        "
+                        media="(min-width:768px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/mobile/portfolio/portfolio7.webp    1x,
+                          ./images/adapt/mobile/portfolio/portfolio7@2x.webp 2x
+                        "
+                        media="(min-width:767.98px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/desktop/portfolio/portfolio7.jpg    1x,
+                          ./images/adapt/desktop/portfolio/portfolio7@2x.jpg 2x
+                        "
+                        media="(min-width:1200px)"
+                        type="image/jpeg"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/tablet/portfolio/portfolio7.jpg    1x,
+                          ./images/adapt/tablet/portfolio/portfolio7@2x.jpg 2x
+                        "
+                        media="(min-width:768px)"
+                        type="image/jpeg"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/mobile/portfolio/portfolio7.jpg    1x,
+                          ./images/adapt/mobile/portfolio/portfolio7@2x.jpg 2x
+                        "
+                        media="(min-width:767.98px)"
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="./images/limited.jpg"
+                        alt="Развертка книги"
+                        width="450"
+                        height="294"
+                      />
+                    </picture>
+
                     <div class="projects__description">
                       <p class="projects__paragraph">
                         Технокряк это современная площадка распространения
@@ -304,7 +749,63 @@
               <div class="projects__content">
                 <a href="" class="projects__link--decoration">
                   <div class="projects__card">
-                    <img src="./images/lab.jpg" alt="Бирка" width="370" />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/adapt/desktop/portfolio/portfolio8.webp    1x,
+                          ./images/adapt/desktop/portfolio/portfolio8@2x.webp 2x
+                        "
+                        media="(min-width:1200px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/tablet/portfolio/portfolio8.webp    1x,
+                          ./images/adapt/tablet/portfolio/portfolio8@2x.webp 2x
+                        "
+                        media="(min-width:768px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/mobile/portfolio/portfolio8.webp    1x,
+                          ./images/adapt/mobile/portfolio/portfolio8@2x.webp 2x
+                        "
+                        media="(min-width:767.98px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/desktop/portfolio/portfolio8.jpg    1x,
+                          ./images/adapt/desktop/portfolio/portfolio8@2x.jpg 2x
+                        "
+                        media="(min-width:1200px)"
+                        type="image/jpeg"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/tablet/portfolio/portfolio8.jpg    1x,
+                          ./images/adapt/tablet/portfolio/portfolio8@2x.jpg 2x
+                        "
+                        media="(min-width:768px)"
+                        type="image/jpeg"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/mobile/portfolio/portfolio8.jpg    1x,
+                          ./images/adapt/mobile/portfolio/portfolio8@2x.jpg 2x
+                        "
+                        media="(min-width:767.98px)"
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="./images/lab.jpg"
+                        alt="Бирка"
+                        width="450"
+                        height="294"
+                      />
+                    </picture>
+
                     <div class="projects__description">
                       <p class="projects__paragraph">
                         Технокряк это современная площадка распространения
@@ -325,11 +826,63 @@
               <div class="projects__content">
                 <a href="" class="projects__link--decoration">
                   <div class="projects__card">
-                    <img
-                      src="./images/growing.jpg"
-                      alt="Открытый ноутбук с приложением"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/adapt/desktop/portfolio/portfolio9.webp    1x,
+                          ./images/adapt/desktop/portfolio/portfolio9@2x.webp 2x
+                        "
+                        media="(min-width:1200px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/tablet/portfolio/portfolio9.webp    1x,
+                          ./images/adapt/tablet/portfolio/portfolio9@2x.webp 2x
+                        "
+                        media="(min-width:768px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/mobile/portfolio/portfolio9.webp    1x,
+                          ./images/adapt/mobile/portfolio/portfolio9@2x.webp 2x
+                        "
+                        media="(min-width:767.98px)"
+                        type="image/jwebp"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/desktop/portfolio/portfolio9.jpg    1x,
+                          ./images/adapt/desktop/portfolio/portfolio9@2x.jpg 2x
+                        "
+                        media="(min-width:1200px)"
+                        type="image/jpeg"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/tablet/portfolio/portfolio9.jpg    1x,
+                          ./images/adapt/tablet/portfolio/portfolio9@2x.jpg 2x
+                        "
+                        media="(min-width:768px)"
+                        type="image/jpeg"
+                      />
+                      <source
+                        srcset="
+                          ./images/adapt/mobile/portfolio/portfolio9.jpg    1x,
+                          ./images/adapt/mobile/portfolio/portfolio9@2x.jpg 2x
+                        "
+                        media="(min-width:767.98px)"
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="./images/growing.jpg"
+                        alt="Открытый ноутбук с приложением"
+                        width="450"
+                        height="294"
+                      />
+                    </picture>
+
                     <div class="projects__description">
                       <p class="projects__paragraph">
                         Технокряк это современная площадка распространения

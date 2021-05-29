@@ -447,14 +447,13 @@ textarea {
   position: relative;
 }
 
-.header__nav {
+.header__nav .container {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 @media screen and (min-width: 767px) {
-  .header__nav {
+  .header__nav .container {
     margin: 0;
   }
 }
@@ -477,7 +476,6 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin-left: 93px; */
   }
 }
 
@@ -561,6 +559,7 @@ textarea {
 @media screen and (min-width: 1200px) {
   .header__contacts {
     display: flex;
+    margin-left: auto;
   }
 }
 
@@ -575,9 +574,8 @@ textarea {
   .header__contacts .link {
     align-items: center;
     justify-content: space-between;
-    padding-top: 32px;
-    padding-bottom: 32px;
     font-size: 14px;
+    padding: 0;
     line-height: 1.14;
   }
 }
@@ -734,7 +732,6 @@ textarea {
 
 .mobile-menu {
   overflow-y: scroll;
-  padding: 48px 40px;
   background-color: var(--white-accent-color);
 }
 
@@ -762,6 +759,7 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0;
   }
 }
 

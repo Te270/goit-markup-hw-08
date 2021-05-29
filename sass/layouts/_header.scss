@@ -3,10 +3,9 @@
   position: relative;
 }
 
-.header__nav {
+.header__nav .container {
   display: flex;
   align-items: center;
-  justify-content: center;
 
   @media screen and (min-width: 767px) {
     margin: 0;
@@ -27,7 +26,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin-left: 93px; */
   }
 }
 
@@ -119,6 +117,7 @@
 .header__contacts {
   @media screen and (min-width: 1200px) {
     display: flex;
+    margin-left: auto;
   }
 }
 
@@ -132,9 +131,8 @@
   @media screen and (min-width: 768px) {
     align-items: center;
     justify-content: space-between;
-    padding-top: 32px;
-    padding-bottom: 32px;
     font-size: 14px;
+    padding: 0;
     line-height: 1.14;
   }
 }

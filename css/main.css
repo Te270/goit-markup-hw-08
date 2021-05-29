@@ -453,6 +453,12 @@ textarea {
   justify-content: center;
 }
 
+@media screen and (min-width: 767px) {
+  .header__nav {
+    margin: 0;
+  }
+}
+
 .header__site-nav {
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -462,6 +468,7 @@ textarea {
   .header__site-nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -470,7 +477,7 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 93px;
+    /* margin-left: 93px; */
   }
 }
 
@@ -554,7 +561,6 @@ textarea {
 @media screen and (min-width: 1200px) {
   .header__contacts {
     display: flex;
-    flex-direction: column-reverse;
   }
 }
 
@@ -567,9 +573,8 @@ textarea {
 
 @media screen and (min-width: 768px) {
   .header__contacts .link {
-    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding-top: 32px;
     padding-bottom: 32px;
     font-size: 14px;
@@ -731,7 +736,6 @@ textarea {
   overflow-y: scroll;
   padding: 48px 40px;
   background-color: var(--white-accent-color);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 }
 
 @media screen and (max-width: 767px) {

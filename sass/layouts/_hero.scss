@@ -1,34 +1,55 @@
 .overlay {
   max-width: 1600px;
-  height: 600px;
+  max-height: 400px;
 
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-image: linear-gradient(
       var(--overlay-gradient-color),
       var(--overlay-gradient-color)
     ),
-    url("../images/heroj.jpg");
+    url("../images/adapt/mobile/hero/hero.jpg");
 
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
 
-  @media screen and (max-width: 480px) {
+@media screen and (min-resolution: 2dppx) {
+  .overlay {
     max-width: 480px;
-    height: 400px;
-  }
+    max-height: 400px;
 
-  @media screen and (max-width: 768px) {
+    background-image: url("/images/adapt/mobile/hero/Hero@2x.jpg");
+  }
+}
+
+@media (min-width: 767px) {
+  .overlay {
     max-width: 768px;
-    height: 400px;
+    background-image: url("/images/adapt/tablet/hero/Hero.jpg");
   }
+  @media screen and (min-resolution: 2dppx) {
+    .overlay {
+      background-image: url("/images/adapt/tablet/hero/Hero@2x.jpg");
+    }
+  }
+}
 
-  @media screen and (max-width: 1200px) {
+@media (min-width: 1199px) {
+  .overlay {
     max-width: 1600px;
-    height: 600px;
+    max-height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: url("/images/adapt/desktop/hero/Hero.jpg");
+  }
+  @media screen and (min-resolution: 2dppx) {
+    .overlay {
+      background-image: url("/images/adapt/desktop/hero/Hero@2x.jpg");
+    }
   }
 }
 
@@ -44,18 +65,21 @@
   margin-bottom: 30px;
 
   color: var(--white-accent-color);
-
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   text-transform: uppercase;
 
-  @media screen and (max-width: 1200px) {
-    font-size: 44px;
-    line-height: 1.36;
-  }
   @media screen and (max-width: 1199px) {
     font-size: 26px;
     line-height: 1.62;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 20px;
+    line-height: 1.82;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
   }
 }

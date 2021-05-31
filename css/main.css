@@ -54,7 +54,7 @@ body {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -209,6 +209,12 @@ img {
   padding: 40px 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+@media screen and (max-width: 450px) {
+  .modal {
+    padding: 5px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -447,9 +453,20 @@ textarea {
   position: relative;
 }
 
-.header__nav .container {
-  display: flex;
-  align-items: center;
+@media screen and (min-width: 767px) {
+  .header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .header__nav-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 @media screen and (min-width: 767px) {
@@ -484,14 +501,16 @@ textarea {
   align-items: center;
 }
 
-.header__current {
-  text-decoration: none;
-  color: currentColor;
-  position: relative;
-}
-
 .header__current::hover, .header__current::focus {
   color: var(--main-current-cl);
+}
+
+@media screen and (min-width: 767px) {
+  .header__current {
+    text-decoration: none;
+    color: currentColor;
+    position: relative;
+  }
 }
 
 .header__current::after {
@@ -515,7 +534,6 @@ textarea {
 }
 
 .header__logo {
-  display: block;
   padding-top: 24px;
   padding-bottom: 25px;
   margin-right: auto;
@@ -523,17 +541,20 @@ textarea {
 
 .header__nav-top {
   display: block;
+  padding-top: 21px;
 }
 
 .header__nav--phone {
   font-size: 34px;
   line-height: 1.18;
+  padding-bottom: 21px;
   color: #2196f3;
 }
 
 .header__nav--mail {
   font-size: 24px;
   line-height: 1.17;
+  padding-top: 21px;
 }
 
 .header__site-nav .item:not(:last-child) {
@@ -630,35 +651,51 @@ textarea {
 
 .overlay {
   max-width: 1600px;
-  height: 600px;
+  max-height: 400px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-image: linear-gradient(var(--overlay-gradient-color), var(--overlay-gradient-color)), url("../images/heroj.jpg");
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-image: linear-gradient(var(--overlay-gradient-color), var(--overlay-gradient-color)), url("../images/adapt/mobile/hero/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-resolution: 2dppx) {
   .overlay {
     max-width: 480px;
-    height: 400px;
+    max-height: 400px;
+    background-image: url("/images/adapt/mobile/hero/Hero@2x.jpg");
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 767px) {
   .overlay {
     max-width: 768px;
-    height: 400px;
+    background-image: url("/images/adapt/tablet/hero/Hero.jpg");
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 767px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: url("/images/adapt/tablet/hero/Hero@2x.jpg");
+  }
+}
+
+@media (min-width: 1199px) {
   .overlay {
     max-width: 1600px;
-    height: 600px;
+    max-height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: url("/images/adapt/desktop/hero/Hero.jpg");
+  }
+}
+
+@media screen and (min-width: 1199px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: url("/images/adapt/desktop/hero/Hero@2x.jpg");
   }
 }
 
@@ -678,17 +715,24 @@ textarea {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 1200px) {
-  .hero__title {
-    font-size: 44px;
-    line-height: 1.36;
-  }
-}
-
 @media screen and (max-width: 1199px) {
   .hero__title {
     font-size: 26px;
     line-height: 1.62;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero__title {
+    font-size: 20px;
+    line-height: 1.82;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
   }
 }
 
@@ -731,14 +775,13 @@ textarea {
 }
 
 .mobile-menu {
-  overflow-y: scroll;
+  overflow-y: auto;
   background-color: var(--white-accent-color);
 }
 
 @media screen and (max-width: 767px) {
   .mobile-menu {
     display: none;
-    position: fixed;
     top: 0;
     right: 0;
     width: 100%;
@@ -795,6 +838,13 @@ textarea {
   color: var(--accent-color);
 }
 
+@media screen and (min-width: 768px) {
+  .mobile__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -849,11 +899,9 @@ textarea {
 }
 
 .features__svg {
-  padding-top: 25px;
-  padding-bottom: 25px;
   margin-bottom: 30px;
   width: 100%;
-  height: auto;
+  height: 120px;
   background-color: var(--features-bcg-cl);
   border-radius: 4px;
   display: flex;
@@ -943,6 +991,12 @@ footer {
 .footer__content--margin {
   margin-bottom: 60px;
   justify-content: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__content--margin {
+    margin-bottom: 0;
+  }
 }
 
 .footer__socials {
@@ -1236,26 +1290,25 @@ footer {
 .clients__company {
   margin-top: 30px;
   margin-left: 30px;
-  width: 210px;
   flex-basis: calc((100% - 2 * 30px) / 2);
 }
 
 @media screen and (min-width: 768px) {
   .clients__company {
-    width: 226px;
     flex-basis: calc((100% - 3 * 30px) / 3);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .clients__company {
-    width: 170px;
     flex-basis: calc((100% - 6 * 30px) / 6);
   }
 }
 
 .clients__img {
-  display: block;
+  width: 210px;
+  height: 92px;
+  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -1266,15 +1319,24 @@ footer {
   transition: color var(--animation), border var(--animation);
 }
 
+@media screen and (min-width: 768px) {
+  .clients__img {
+    width: 226px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__img {
+    width: 170px;
+  }
+}
+
 .clients__img:hover, .clients__img:focus {
   color: var(--clients-company-hover);
   border: 1px solid var(--clients-company-hover);
 }
 
 .clients__svg {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   width: 106px;
   height: 60px;
   fill: currentColor;
@@ -1440,14 +1502,15 @@ footer {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-/* .projects__group {
-  margin-top: 0;
+.projects__group {
+  margin-top: 4px;
   margin-bottom: 0;
   font-size: 16px;
   line-height: 1.87;
   text-decoration: none;
   color: var(--primary-text-color);
-} */
+}
+
 .projects__items:nth-child(3n) {
   margin-right: 0;
 }

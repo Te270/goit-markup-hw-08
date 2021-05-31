@@ -21,22 +21,22 @@
 .clients__company {
   margin-top: 30px;
   margin-left: 30px;
-  width: 210px;
+
   flex-basis: calc((100% - 2 * 30px) / 2);
 
   @media screen and (min-width: 768px) {
-    width: 226px;
     flex-basis: calc((100% - 3 * 30px) / 3);
   }
 
   @media screen and (min-width: 1200px) {
-    width: 170px;
     flex-basis: calc((100% - 6 * 30px) / 6);
   }
 }
 
 .clients__img {
-  display: block;
+  width: 210px;
+  height: 92px;
+  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -48,6 +48,14 @@
 
   transition: color var(--animation), border var(--animation);
 
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
+
   &:hover,
   &:focus {
     color: var(--clients-company-hover);
@@ -56,9 +64,6 @@
 }
 
 .clients__svg {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   width: 106px;
   height: 60px;
   fill: currentColor;

@@ -29,6 +29,10 @@ footer {
 .footer__content--margin {
   margin-bottom: 60px;
   justify-content: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 }
 
 .footer__socials {
